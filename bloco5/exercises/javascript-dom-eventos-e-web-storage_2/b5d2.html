@@ -73,6 +73,16 @@
       adicionaTag('div','body','','main-content');
       adicionaTag('div','div','','center-content');
 
+      function adicionaTagEmLista (tag, father, content, classe, indice) {
+          let text1 = document.getElementsByTagName(father)[indice];
+          let writeText1 = document.createElement(tag);
+            writeText1.innerText = content;
+            writeText1.className = classe;
+          let showText1 = text1.appendChild(writeText1);
+      }
+
+      adicionaTagEmLista('p','div','Amo estudar aqui, apesar de achar alguns conteúdos difíceis, sigo em frente :)','','1');
+
     </script>
   </body>
 </html>
