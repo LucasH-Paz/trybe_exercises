@@ -73,15 +73,30 @@
       adicionaTag('div','body','','main-content');
       adicionaTag('div','div','','center-content');
 
-      function adicionaTagEmLista (tag, father, content, classe, indice) {
+      function adicionaTagEmLista (tag, father, content, classe, indice, fonte) {
           let text1 = document.getElementsByTagName(father)[indice];
           let writeText1 = document.createElement(tag);
             writeText1.innerText = content;
             writeText1.className = classe;
+            writeText1.src = fonte;
           let showText1 = text1.appendChild(writeText1);
+          return writeText1;
       }
 
-      adicionaTagEmLista('p','div','Amo estudar aqui, apesar de achar alguns conteúdos difíceis, sigo em frente :)','','1');
+      adicionaTagEmLista('p','div','Amo estudar aqui, apesar de achar alguns conteúdos difíceis, sigo em frente :)','','1','');
+      adicionaTagEmLista('div','div','','left-content','0','');
+      adicionaTagEmLista('div','div','','right-conten','0','');
+      adicionaTagEmLista('img','div','','small-image','2','https://picsum.photos/200');
+    
+    let list1 = document.getElementsByTagName('div')[3];
+    let numberFull = ['um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez'];
+    let numberPosition = "";
+      for(let index =0; index<numberFull.length; index +=1) {
+          numberPosition = numberFull[index];
+          let writeList1 = document.createElement('ul');
+          writeList1.innerText = numberPosition;
+          list1.appendChild(writeList1);
+      };
 
     </script>
   </body>
