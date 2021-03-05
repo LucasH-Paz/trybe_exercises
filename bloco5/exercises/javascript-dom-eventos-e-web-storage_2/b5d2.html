@@ -1,108 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Exercício 5.2</title>
     <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
+        div {
+            border-color: black;
+            border-style: solid;
+        }
 
-      .title {
-        text-align: center;
-      }
+        .title {
+            text-align: center;
+        }
 
-      .main-content {
-        background-color: yellow;
-      }
+        .main-content {
+            background-color: yellow;
+        }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
+        .main-content .center-content p {
+            font-style: italic;
+        }
 
-      .main-content .left-content {
-        background-color: green;
-        width: 60%;
-        margin-left: 0;
-        margin-right: auto;
-      }
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
 
-      .main-content .left-content .small-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 100%;
-      }
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
 
-      .main-content .right-content {
-        background-color: blue;
-        width: 60%;
-        margin-left: auto;
-        margin-right: 0;
-      }
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
 
-      .main-content .description {
-        text-align: center;
-      }
+        .main-content .description {
+            text-align: center;
+        }
     </style>
-  </head>
-  <body>
-    <script>
-      // COLOQUE SEU CÓDIGO AQUI
-      //Os parâmetros DEVEM ser strings;
+</head>
 
-      function adicionaTag (tag, father, content, classe) {
-          let title1 = document.querySelector(father);
-          let writeTitle1 = document.createElement(tag);
+<body>
+    <script>
+        // COLOQUE SEU CÓDIGO AQUI
+        //Os parâmetros DEVEM ser strings;
+
+        function adicionaTag(tag, father, content, classe) {
+            let title1 = document.querySelector(father);
+            let writeTitle1 = document.createElement(tag);
             writeTitle1.innerText = content;
             writeTitle1.className = classe;
-          let showTitle1 = title1.appendChild(writeTitle1);
-          return writeTitle1;
-      }
+            let showTitle1 = title1.appendChild(writeTitle1);
+            return writeTitle1;
+        }
 
-      adicionaTag('h1','body','Exercício 5.2 - JavaScript DOM','');
-      adicionaTag('div','body','','main-content');
-      adicionaTag('div','div','','center-content');
+        adicionaTag('h1', 'body', 'Exercício 5.2 - JavaScript DOM', '');
+        adicionaTag('div', 'body', '', 'main-content');
+        adicionaTag('div', 'div', '', 'center-content');
 
-      function adicionaTagEmLista (tag, father, content, classe, indice, fonte) {
-          let text1 = document.getElementsByTagName(father)[indice];
-          let writeText1 = document.createElement(tag);
+        function adicionaTagEmLista(tag, father, content, classe, indice, fonte) {
+            let text1 = document.getElementsByTagName(father)[indice];
+            let writeText1 = document.createElement(tag);
             writeText1.innerText = content;
             writeText1.className = classe;
             writeText1.src = fonte;
-          let showText1 = text1.appendChild(writeText1);
-          return writeText1;
-      }
+            let showText1 = text1.appendChild(writeText1);
+            return writeText1;
+        }
 
-      adicionaTagEmLista('p','div','Amo estudar aqui, apesar de achar alguns conteúdos difíceis, sigo em frente :)','','1','');
-      adicionaTagEmLista('div','div','','left-content','0','');
-      adicionaTagEmLista('div','div','','right-conten','0','');
-      adicionaTagEmLista('img','div','','small-image','2','https://picsum.photos/200');
-    
-    let list1 = document.getElementsByTagName('div')[3];
-    let numberFull = ['um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez'];
-    let numberPosition = "";
-      for(let index =0; index<numberFull.length; index +=1) {
-          numberPosition = numberFull[index];
-          let writeList1 = document.createElement('ul');
-          writeList1.innerText = numberPosition;
-          list1.appendChild(writeList1);
-      };
+        adicionaTagEmLista('p', 'div', 'Amo estudar aqui, apesar de achar alguns conteúdos difíceis, sigo em frente :)', '', '1', '');
+        adicionaTagEmLista('div', 'div', '', 'left-content', '0', '');
+        adicionaTagEmLista('div', 'div', '', 'right-conten', '0', '');
+        adicionaTagEmLista('img', 'div', '', 'small-image', '2', 'https://picsum.photos/200');
 
-      adicionaTagEmLista('h3','div','','','0','');
-      adicionaTagEmLista('h3','div','','','0','');
-      adicionaTagEmLista('h3','div','','','0','');
+        let list1 = document.getElementsByTagName('div')[3];
+        let numberFull = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+        let numberPosition = "";
+        for (let index = 0; index < numberFull.length; index += 1) {
+            numberPosition = numberFull[index];
+            let writeList1 = document.createElement('ul');
+            writeList1.innerText = numberPosition;
+            list1.appendChild(writeList1);
+        };
+
+        adicionaTagEmLista('h3', 'div', '', '', '0', '');
+        adicionaTagEmLista('h3', 'div', '', '', '0', '');
+        adicionaTagEmLista('h3', 'div', '', '', '0', '');
+
+    //Fim da primeira parte do exercicio;
+
+    document.querySelector('h1').className = 'title';
+    let subtitle3 = document.getElementsByTagName('h3');
+    for (index2 =0; index2 < subtitle3.length; index2 +=1) {
+        subtitle3[index2].className = 'description';
+    }
 
 
     </script>
-  </body>
+</body>
+
 </html>
