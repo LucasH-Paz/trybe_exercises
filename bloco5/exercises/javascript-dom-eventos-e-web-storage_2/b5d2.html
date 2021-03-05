@@ -104,13 +104,24 @@
         adicionaTagEmLista('h3', 'div', '', '', '0', '');
         adicionaTagEmLista('h3', 'div', '', '', '0', '');
 
-    //Fim da primeira parte do exercicio;
+        //Fim da primeira parte do exercicio;
 
-    document.querySelector('h1').className = 'title';
-    let subtitle3 = document.getElementsByTagName('h3');
-    for (index2 =0; index2 < subtitle3.length; index2 +=1) {
-        subtitle3[index2].className = 'description';
-    }
+        document.querySelector('h1').className = 'title';
+        let subtitle3 = document.getElementsByTagName('h3');
+        for (index2 = 0; index2 < subtitle3.length; index2 += 1) {
+            subtitle3[index2].className = 'description';
+        };
+
+        let divPai = document.querySelector('div');
+        divPai.removeChild(divPai.childNodes[1]);
+        document.querySelectorAll('div')[2].style.marginRight ='auto';
+        document.querySelectorAll('div')[0].style.background ='green';
+
+        for (let index3 = (accesList.length - 2); index3 < accesList.length; index3 += 1) {
+            let accesList = document.getElementsByTagName('ul')[index3];
+            accesList.removeChild(accesList.childElementCount[0]);
+        };
+        
 
 
     </script>
