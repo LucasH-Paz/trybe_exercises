@@ -7,7 +7,8 @@ console.log(estados[15]);
 function brazilStates() {
     let state = document.getElementById('state');
     for (let index = 0; index < estados.length; index += 1) { 
-        let createState = document.createElement('option');       
+        let createState = document.createElement('option');
+        createState.classList.add('option')       
         createState.innerText = estados[index];
         state.appendChild(createState);
     }

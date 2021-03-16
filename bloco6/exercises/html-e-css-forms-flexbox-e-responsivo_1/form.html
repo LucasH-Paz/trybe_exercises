@@ -6,65 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aula-forms</title>
+    <link href="bulma/css/bulma.css" rel="stylesheet">
     <link href="formStyles.css" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <h1>Informações de Currículo</h1>
+        <h1 class="title">Informações de Currículo</h1>
         <hr>
     </header>
     <form action="GET">
-        <fieldset>
-            <legend> Dados Pessoais</legend>
-            <label for="fullName">Nome Completo</label>
-            <input id="fullName" maxlength="40" type="text" name="name" required>
-            <br>
-            <label for="email">E-mail</label>
-            <input id="email" type="email" name="email" maxlength="50" required>
-            <br>
-            <label for="cpf">CPF</label>
-            <input id="cpf" type="number" name="cpf" maxlength="11" required>
-            <br>
-            <label for="adress">Endereço</label>
-            <input id="adress" type="text" name="endereço" maxlength="200" required>
-            <br>
-            <label for="city">Cidade</label>
-            <input id="city" type="text" name="cidade" maxlength="28" required>
-            <br>
-            <label for="state">Estado
-                <select id="state">
-                </select>
-            </label>
-            <fieldset>
-                <legend>Tipo de Moradia</legend>
-                <label for="casa">
-                    <input type="radio" name="moradia" required id="casa">Casa
+        <div class="field">
+            <div class="control">
+                <label class="label" for="fullName">Nome Completo</label>
+                <input class="input" id="fullName" maxlength="40" type="text" name="name" required>
+                <br>
+                <label class="label" for="email">E-mail</label>
+                <input class="input" id="email" type="email" name="email" maxlength="50" required>
+                <br>
+                <label class="label" for="cpf">CPF</label>
+                <input class="input" id="cpf" type="number" name="cpf" maxlength="11" required>
+                <br>
+                <label class="label" for="adress">Endereço</label>
+                <input class="input" id="adress" type="text" name="endereço" maxlength="200" required>
+                <br>
+                <label class="label" for="city">Cidade</label>
+                <input class="input" id="city" type="text" name="cidade" maxlength="28" required>
+                <br>
+                <label for="state" class="label">Estado
+                    <div class="field">
+                        <div class="select is-primary">
+                            <select id="state">
+                                <option selected>Selecione seu estado</option>
+                            </select>
+                        </div>
+                    </div>
                 </label>
-                <label for="apart">
-                    <input type="radio" name="moradia" required id="apart">Apartemento
+                <div>
+                    <label class="label" for="casa">
+                        <input class="radio is-grouped" type="radio" name="moradia" required id="casa">Casa
+                    </label>
+                    <label class="label" for="apart">
+                        <input class="radio is-grouped" type="radio" name="moradia" required id="apart">Apartemento
+                    </label>
+                </div>
+            </div>
+            <fieldset>
+                <label class="label" for="about">Sobre seu último trabalho
+                    <textarea class="textarea" placeholder="Diga como foi seu último trabalho" id="about" required
+                        maxlength="1000"></textarea>
+                </label>
+                <label class="label" for="cargo">Cargo
+                    <input class="input" type="tetx" id="cargo" maxlength="40" required>
+                </label>
+                <label class="label" for="desciption">Descreva sua função
+                    <input class="input" type="text" id="description" maxlength="500" required>
+                </label>
+                <label class="label" for="data">Data de início
+                    <input type="date" id="data" required>
                 </label>
             </fieldset>
-        </fieldset>
-        <fieldset>
-            <legend>Dados do ultimo emprego</legend>
-            <label for="about">Sobre seu último trabalho
-                <textarea placeholder="Diga como foi seu último trabalho" id="about" required
-                    maxlength="1000"></textarea>
-            </label>
-            <label for="cargo">Cargo
-                <input type="tetx" id="cargo" maxlength="40" required>
-            </label>
-            <label for="desciption">Descreva sua função
-                <input type="text" id="description" maxlength="500" required>
-            </label>
-            <label for="data">Data de início
-                <input type="date" id="data" required>
-            </label>
-        </fieldset>
-        <button type="submit" id="toPrevent">Enviar</button>
-        <button type="reset" id="clean">Limpar</button>
+        </div>
     </form>
+    <br>
+    <br>
+    <div class="filed" id="botoes">
+        <div class="control">
+            <button class="button is-primary" type="submit" id="toPrevent">Enviar</button>
+            <button class="button is-danger" type="reset" id="clean">Limpar</button>
+        </div>
+    </div>
     <script type="text/javascript" src="formScript.js"></script>
 </body>
 
