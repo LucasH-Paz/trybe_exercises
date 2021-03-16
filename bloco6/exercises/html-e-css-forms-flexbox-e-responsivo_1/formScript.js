@@ -5,13 +5,21 @@ let estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MS',
 console.log(estados[15]);
 
 function brazilStates() {
-    for (let index = 0; index < estados.length; index += 1) {
-        let state = document.getElementById('state');
-        let createState = document.createElement('option');
+    let state = document.getElementById('state');
+    for (let index = 0; index < estados.length; index += 1) { 
+        let createState = document.createElement('option');       
         createState.innerText = estados[index];
-        let printState = state.appendChild(createState);
+        state.appendChild(createState);
     }
 }
 
 let access = document.getElementById('state');
 access.addEventListener('click', brazilStates);
+
+let access2 = document.getElementById('toPrevent');
+access2.addEventListener('click', fluxCancel);
+
+function fluxCancel (event) {
+    event.preventDefault();
+    alert('Verifique os dados informados, encontramos inconsistências');
+}

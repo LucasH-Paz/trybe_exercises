@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <header>
+        <h1>Informações de Currículo</h1>
+        <hr>
+    </header>
     <form action="GET">
         <fieldset>
             <legend> Dados Pessoais</legend>
@@ -28,9 +32,38 @@
             <label for="city">Cidade</label>
             <input id="city" type="text" name="cidade" maxlength="28" required>
             <br>
-            <select id="state">
-            </select>
+            <label for="state">Estado
+                <select id="state">
+                </select>
+            </label>
+            <fieldset>
+                <legend>Tipo de Moradia</legend>
+                <label for="casa">
+                    <input type="radio" name="moradia" required id="casa">Casa
+                </label>
+                <label for="apart">
+                    <input type="radio" name="moradia" required id="apart">Apartemento
+                </label>
+            </fieldset>
         </fieldset>
+        <fieldset>
+            <legend>Dados do ultimo emprego</legend>
+            <label for="about">Sobre seu último trabalho
+                <textarea placeholder="Diga como foi seu último trabalho" id="about" required
+                    maxlength="1000"></textarea>
+            </label>
+            <label for="cargo">Cargo
+                <input type="tetx" id="cargo" maxlength="40" required>
+            </label>
+            <label for="desciption">Descreva sua função
+                <input type="text" id="description" maxlength="500" required>
+            </label>
+            <label for="data">Data de início
+                <input type="date" id="data" required>
+            </label>
+        </fieldset>
+        <button type="submit" id="toPrevent">Enviar</button>
+        <button type="reset" id="clean">Limpar</button>
     </form>
     <script type="text/javascript" src="formScript.js"></script>
 </body>
