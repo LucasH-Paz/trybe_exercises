@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula-forms</title>
+    <link href="formStyles.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="GET">
+        <fieldset>
+            <legend> Dados Pessoais</legend>
+            <label for="fullName">Nome Completo</label>
+            <input id="fullName" maxlength="40" type="text" name="name" required>
+            <br>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" maxlength="50" required>
+            <br>
+            <label for="cpf">CPF</label>
+            <input id="cpf" type="number" name="cpf" maxlength="11" required>
+            <br>
+            <label for="adress">Endereço</label>
+            <input id="adress" type="text" name="endereço" maxlength="200" required>
+            <br>
+            <label for="city">Cidade</label>
+            <input id="city" type="text" name="cidade" maxlength="28" required>
+            <br>
+            <select id="state">
+            </select>
+        </fieldset>
+    </form>
+    <script type="text/javascript" src="formScript.js"></script>
+</body>
+
+</html>
