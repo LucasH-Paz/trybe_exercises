@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: larger;
+}
+
+h1 {
+    font-size: larger;
+}
+
+h2 {}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-color: blueviolet;
+        font-size: x-large;
+    }
+
+    figure {
+        margin: 0px;
+        flex-basis: 40%;
+    }
+
+    #img-list {
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+}
